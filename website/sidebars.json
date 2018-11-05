@@ -1,0 +1,44 @@
+{
+  "textbook": {
+    " ": [
+    	"course-site",
+    	"about"
+    ],
+    "Xcode and Swift Basics":[
+    	"basics/getting-to-know-xcode",
+    	"basics/intro-to-swift",
+        "basics/control-flow",
+        "basics/functions-closures",
+    	"basics/object-oriented-programming",
+        "basics/generics-optionals-closures"
+    ],
+    "Interface Builder and Autolayout": [
+        "ib-autolayout/storyboard-objects",
+        "ib-autolayout/autolayout-constraints",
+        "ib-autolayout/human-interface-guidelines"
+    ],
+    "Developing More Complex Apps": [
+        "complex-apps/mvc",
+        "complex-apps/multiview",
+        "complex-apps/collection-tableviews",
+        "complex-apps/scrollviews",
+        "complex-apps/gestures"
+    ],
+    "Networking and Cocoapods": [
+        "networking-cocoapods/networking",
+        "networking-cocoapods/cocoapods",
+        "networking-cocoapods/alamofire",
+        "networking-cocoapods/firebase",
+        "networking-cocoapods/cocoapod-showcase"
+    ],
+    "Additional Topics": [
+        "additional-topics/data-persistence",
+        "additional-topics/avfoundation",
+        "additional-topics/location-mapkit",
+        "additional-topics/spritekit",
+        "additional-topics/webkit",
+        "additional-topics/arkit-coreml",
+        "additional-topics/async"
+    ]
+  }
+}
