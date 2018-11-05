@@ -6,7 +6,7 @@ sidebar_label: About This Book
 
 ## CS198-001: iOS Development DeCal
 
-**By David Xiong, RJ Pimentel, and other contributors**
+**By [David (Ents) Xiong](weidavidxiong.com) and other contributors**
 
 This is the textbook for the [iOS Development DeCal](http://iosdecal.com/) class at UC Berkeley.
 
