@@ -28,9 +28,10 @@ Start new sections with second-level headers (`## Title`). First-level headers w
 
 ## Deploying to Github-Pages
 
-Docusaurus supports automatically pushing to a `gh-pages` branch in a repo! Check that the details in `website/siteConfig.js` are accurate, then run `npm run publish-gh-pages`. You may need to specify `GIT_USER` as an environment variable first though.
+Docusaurus supports automatically pushing to a `gh-pages` branch in a repo! First make sure that [GitHub SSH keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) are set up properly on your computer and that you have edit permissions in the repo. When you want to deploy, check that the details in `website/siteConfig.js` are accurate, and then run `./deploy_site.sh`. You may need to run `chmod u+x deploy_site.sh` first to give it proper permissions.
 
-More information [here](https://github.com/facebook/Docusaurus/blob/master/docs/getting-started-publishing.md).
+
+You could also do it manually - more information [here](https://github.com/facebook/Docusaurus/blob/master/docs/getting-started-publishing.md).
 
 
 ## TODO:
