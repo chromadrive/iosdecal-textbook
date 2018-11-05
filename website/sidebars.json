@@ -10,7 +10,7 @@
         "basics/control-flow",
         "basics/functions-closures",
     	"basics/object-oriented-programming",
-        "basics/generics-optionals-closures"
+        "basics/generics-optionals"
     ],
     "Interface Builder and Autolayout": [
         "ib-autolayout/storyboard-objects",

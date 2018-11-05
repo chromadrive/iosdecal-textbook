@@ -4,7 +4,29 @@ title: Introduction to Swift
 sidebar_label: Introduction to Swift
 ---
 
-As is computing tradition, let's start with a simple "Hello World" program. We can do this in one line using Swift:
+The remainder of this chapter will be a crash-course through Swift. Swift began development in 2010 and was first released in 2014, making it one of the newest languages on the block. The language ideas for Swift were taken from Rust, Ruby, Haskell, C#, CLU, Python, Go, and a range of other programming languages, so if you're familiar with any of those you may be able to draw some parallels.
+
+Prior to the announcement of Swift, iOS apps were primarily written in Objective-C. The language has been around for more than 20 years and was chosen by Apple as the primary programming language for Mac and iOS development. However, Objective-C was pretty hard to learn and had non-standard syntax, which scared off a lot of beginners from getting started with iOS development.
+
+The release of Swift programming language is probably Apple's answer to some of these comments - the syntax is much cleaner and easier to read, and it's [open source](https://github.com/apple/swift) too!
+
+## Swift Playgrounds
+
+I don't want to bore you by just showing you the code. There is no better way to explore coding than actually writing code. Xcode has a built-in feature called *Playgrounds*. It's an interactive development environment for developers to experiment Swift programming and allows you to see the result of your code in real-time - a bit like a Jupyter Notebook for Python but fancier.
+
+When you start up Xcode, you can create a Playground by selecting "Get Started with a Playground" in the startup dialog and choosing a template ("Blank" usually suffices).
+
+Once you save the file somewhere, Xcode opens the Playground interface:
+
+<center>![](assets/basics/xcode_playground.png)</center>
+
+The left pane of the screen is an editor area where you can write code. When you want to test your code and see how it works, hit the Play button. Playground immediately interprets the code (up to the line of the Play button) and displays the result on the right pane.
+
+Let's get started!
+
+## Hello World!
+
+As is computing tradition, let's start with a simple "hello world" program. We can do this in one line using Swift:
 
 ```swift
 print("Hello World!")
