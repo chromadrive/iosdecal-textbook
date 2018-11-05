@@ -35,5 +35,9 @@ You could also do it manually - more information [here](https://github.com/faceb
 
 
 ## TODO:
-- Look into syntax highlighting and copying code blocks
-- Theming???
+- Syntax highlighting **[Done]**
+- Copying code blocks **[Done]**
+- Figure out reliable (but not massive) way to host images
+- Colors and logo?
+- Implement [Algolia Docsearch](https://community.algolia.com/docsearch/)
+- Before actual deployment on class website, change lines 25-41 of siteConfig.js to reflect new subdomain
