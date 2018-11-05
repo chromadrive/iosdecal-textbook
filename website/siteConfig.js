@@ -22,8 +22,8 @@ const users = [
 ];*/
 
 const siteConfig = {
-  title: 'iOS Development DeCal // Textbook', // Title for your website.
-  tagline: 'iOS Development DeCal Textbook',
+  title: 'CS198-001 Textbook', // Title for your website.
+  tagline: 'CS198-001 Textbook',
   url: 'http://textbook.chromadrive.net/', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -33,6 +33,7 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'iosdecal-textbook',
   organizationName: 'chromadrive',
+  cname: 'textbook.chromadrive.net',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
