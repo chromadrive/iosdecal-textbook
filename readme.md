@@ -8,7 +8,8 @@ This textbook is written using Markdown, and uses Facebook's [Docusaurus](https:
 
 1) Install (or upgrade) [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/en/docs/install)
 2) `cd` into the `website` folder
-3) To load the site, run `npm start` and go to http://localhost:3000 in your browser
+3) Install Docusaurus using npm: `npm install docusaurus`
+4) To load the site, run `npm start` and go to http://localhost:3000 in your browser
 
 ## Writing Sections
 
