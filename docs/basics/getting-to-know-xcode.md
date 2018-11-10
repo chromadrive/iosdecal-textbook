@@ -20,13 +20,13 @@ Here's the [full documentation for Xcode](https://developer.apple.com/library/ar
 
 This is what the interface looks like when you're writing code for an Xcode project (`.xcodeproj`) - there are 4 major areas: the Navigator, Editor, Debug Area and Utility Areas:
 
-<center>![](assets/basics/xcode_interface.jpg)</center>
+<center>![](assets/basics/xcode_interface.png)</center>
 
 ### Navigator Area
 
 This is where you’ll see all the files associated with your project. If you click on a file in the project navigator, it will display the file’s contents in the Editor area.
 
-<center>![](assets/basics/xcode_navigator.jpg)</center>
+<center>![](assets/basics/xcode_navigator.png)</center>
 
 You can right click on the project navigator and create new files or add existing files to your project, or you can drag folders or files from your computer directly onto the project navigator and a dialog will pop up asking how you want to add the files.
 
@@ -36,15 +36,13 @@ The root node of the project navigator is your Xcode project file (indicated by 
 
 The editor area is where we’ll probably be spending most of our time! This is where all the coding happens.
 
-<center>![](assets/basics/xcode_editor.jpg)</center>
+<center>![](assets/basics/xcode_editor.png)</center>
 
 Notice the navigation bar along the top of the editor area - this is know as the Jump Bar and is another way to quickly get to the file you need. It looks like a breadcrumb at the top of the editor area:
 
-<center>![](assets/basics/xcode_jumpbar.jpg)</center>
+<center>![](assets/basics/xcode_jumpbar.png)</center>
 
 If you click the tail segment of the jump bar (which is the current file you’re looking at), it will open up a menu showing you all the methods in the file which is not only useful to jump to another area within the file, but it will show you at a glance what methods are available in this file.
-
-<center>![](assets/basics/xcode_jumpbar_tail.jpg)</center>
 
 The editor area also has three different views, and you can toggle between them with the set of buttons in the upper right corner:
 
