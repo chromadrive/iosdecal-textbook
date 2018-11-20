@@ -22,19 +22,19 @@ This will automatically add a few elements to our storyboard:
 
 - A **Split View Controller**. This is the root view of the application – the split view that will contain the entire rest of the app.
 
-- A **Navigation Controller**. This represents the `UINavigationController` that will be the root view of the master view controller (ie, the left pane of the split view when on iPad or Landscape on large iPhones). If you look in the split view controller, you’ll see the navigation controller has a relationship segue of master view controller. This allows us to create an entire navigation hierarchy in the master view controller without needing to affect the detail view controller at all.
+- A **Navigation Controller**. This represents the `UINavigationController` that will be the root view of the master view controller (ie, the left pane of the split view when on iPad or Landscape on large iPhones). If we look in the split view controller, we'll see the navigation controller has a relationship segue of master view controller. This allows us to create an entire navigation hierarchy in the master view controller without needing to affect the detail view controller at all.
 
 - A **View Controller**. This will eventually display all the details of our items. The view controller has a relationship segue of detail view controller, much like that of our friends `UINavigationController` and `UITabBarController`.
 
 - A **Table View Controller**. This is the root view controller of the master `UINavigationController`. This will eventually display the master list of items.
 
-Since we deleted the default initial view controller from the storyboard, we'll need to tell the storyboard that you want your split view controller to be the initial view controller. Select the Split View Controller and open the Attributes inspector, then check the `Is Initial View Controller` option.
+Since we deleted the default initial view controller from the storyboard, we'll need to tell the storyboard that we want our split view controller to be the initial view controller. Select the Split View Controller and open the Attributes inspector, then check the `Is Initial View Controller` option.
 
 Let's build and run the app on an iPad simulator, and rotate it to landscape:
 
 <center> **Screenshot Here (Build #1 on iPad)** </center>
 
-Now run it on an iPhone simulator (any of them except a plus-sized phone, which is large enough that it will act just like the iPad version in landscape mode) and you will see that it starts off showing the detail view in full screen. It will also allows you to tap the back button on the navigation bar to pop back to the master view controller:
+Now run it on an iPhone simulator (any of them except a plus-sized phone, which is large enough that it will act just like the iPad version in landscape mode) and you will see that it starts off showing the detail view in full screen. It will also allows us to tap the back button on the navigation bar to pop back to the master view controller:
 
 <center> **Screenshot Here (Build #1 on iPad)** </center>
 
@@ -76,7 +76,7 @@ Build and run. At this point we should see the custom view controllers:
 
 ### Defining a Model
 
-The next thing we need to do is define a model for the data you want to display. For the purposes of this example, let's create a codex of items that you might find in an RPG game.
+The next thing we need to do is define a model for the data we want to display. For the purposes of this example, let's create a codex of items that we might find in an RPG game.
 
 We first need to find a way to represent the items we'll display. We'll just define a simple class with some attribute properties about each item. Create a new Swift class named `Item`, and replace the code in it with this:
 
@@ -113,7 +113,7 @@ let items = [
 ]
 ```
 
-At this point, we would also want to replace the return statement in `tableView(_:numberOfRowsInSection:)` with `monsters.count`, but it's not strictly necessary for the purposes of this demo.
+At this point, we would also want to replace the return statement in `tableView(_:numberOfRowsInSection:)` with `items.count`, but it's not strictly necessary for the purposes of this demo.
 
 Now, edit `tableView(_:cellForRowAtIndexPath:)` to add the following code before the final return statement:
 
@@ -151,7 +151,7 @@ func refreshUI() {
 }
 ```
 
-Whenever you switch the item, we want the UI to refresh itself and update the details displayed in the outlets. It’s possible that you’ll change item and trigger the method even before the view has loaded, so we'll need to call loadViewIfNeeded() to guarantee that the view is loaded and its outlets are connected.
+Whenever we switch the item, we want the UI to refresh itself and update the details displayed in the outlets. It’s possible that we'll change item and trigger the method even before the view has loaded, so we'll need to call loadViewIfNeeded() to guarantee that the view is loaded and its outlets are connected.
 
 Let's connect the outlets now. In Main.storyboard, right-click the Detail View Controller object from the Document Outline to display the list of outlets, and hook up each of the relevant outlets to their respective labels.
 
@@ -167,7 +167,7 @@ protocol ItemSelectionDelegate: class {
 }
 ```
 
-This defines a protocol with a single method, `itemSelected(_:)`. The detail view controller will implement this method, and the master view controller will message it when a monster is selected.
+This defines a protocol with a single method, `itemSelected(_:)`. The detail view controller will implement this method, and the master view controller will message it when an item is selected.
 
 Next, update `MasterViewController` to add a property for an object conforming to the delegate protocol:
 
@@ -175,7 +175,7 @@ Next, update `MasterViewController` to add a property for an object conforming t
 weak var delegate: ItemSelectionDelegate?
 ```
 
-This means that the delegate property is required to be an object that has `monsterSelected(_:)` implemented. That object will be responsible for handling what needs to happen within its view after the item was selected.
+This means that the delegate property is required to be an object that has `itemSelected(_:)` implemented. That object will be responsible for handling what needs to happen within its view after the item was selected.
 
 > **Note**: You need to mark the delegate as weak to avoid a retain cycle. To learn more about retain cycles in Swift, check out [this article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef). We won't cover memory management in this class, but if you're planning to develop anything high perfomance or that requires serious optimization retain cycles are quite useful to learn about!
 
@@ -212,7 +212,7 @@ Build and run the app on iPad, and you should be able to select an item and see 
 
 <center> **Screenshot Here (Final Build on iPad)** </center>
 
-Looks great! Except there’s one problem left – if you run it on iPhone, selecting monsters from the master table view does not show the detail view controller. We need to add make a small modification to make sure that the split view works on iPhone, in addition to iPad.
+Looks great! Except there’s one problem left – if you run it on iPhone, selecting items from the master table view does not show the detail view controller. We need to add make a small modification to make sure that the split view works on iPhone, in addition to iPad.
 
 Open up MasterViewController.swift, add the following to the end of `tableView(_:didSelectRowAt:)`:
 
@@ -222,9 +222,9 @@ if let detailViewController = delegate as? DetailViewController {
 }
 ```
 
-First, you need to make sure the delegate is set and that it is a `DetailViewController` instance as you expect. You then call `showDetailViewController(_:sender:)` on the split view controller and pass in the detail view controller. Every subclass of `UIViewController` has an inherited property `splitViewController`, which will refer to it’s containing view controller, if one exists.
+First, we need to make sure the delegate is set and that it is a `DetailViewController` instance as we'd expect. We then call `showDetailViewController(_:sender:)` on the split view controller and pass in the detail view controller. Every subclass of `UIViewController` has an inherited property `splitViewController`, which will refer to it’s containing view controller, if one exists.
 
-This new code only changes the behavior of the app on iPhone, causing the navigation controller to push the detail controller onto the stack when you select a new item. It does not alter the behavior of the iPad implementation, since on iPad the detail view controller is always visible. After making this change, run it on iPhone and it should now behave properly. Adding just a few lines of code got you a fully functioning split view controller on both iPad and iPhone!
+This new code only changes the behavior of the app on iPhone, causing the navigation controller to push the detail controller onto the stack when we select a new item. It does not alter the behavior of the iPad implementation, since on iPad the detail view controller is always visible. After making this change, run it on iPhone and it should now behave properly. Adding just a few lines of code got you a fully functioning split view controller on both iPad and iPhone!
 
 <center> **Screenshot Here (Final Build on iPhone)** </center>
 
