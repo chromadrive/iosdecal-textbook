@@ -2,7 +2,8 @@
   "textbook": {
     " ": [
     	"course-site",
-    	"about"
+    	"about",
+        "contributing"
     ],
     "Xcode and Swift Basics":[
     	"basics/getting-to-know-xcode",

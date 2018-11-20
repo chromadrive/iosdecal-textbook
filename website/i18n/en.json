@@ -85,6 +85,10 @@
         "title": "SplitViews",
         "sidebar_label": "SplitViews"
       },
+      "contributing": {
+        "title": "Contributing to this Book",
+        "sidebar_label": "Contributing to this Book"
+      },
       "course-site": {
         "title": "Course Website",
         "sidebar_label": "Course Website"
