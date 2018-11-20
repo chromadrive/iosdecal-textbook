@@ -21,7 +21,8 @@
         "complex-apps/mvc",
         "complex-apps/multiview",
         "complex-apps/collection-tableviews",
-        "complex-apps/scrollviews",
+        "complex-apps/scrollviews", 
+        "complex-apps/splitviews",
         "complex-apps/gestures"
     ],
     "Networking and Cocoapods": [

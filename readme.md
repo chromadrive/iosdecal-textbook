@@ -36,8 +36,8 @@ You could also do it manually - more information [here](https://github.com/faceb
 
 
 ## TODO:
-- Syntax highlighting **[Done]**
-- Copying code blocks **[Done]**
+- Write GH-Wiki article on contributing and style guidelines, and reference it in this readme.
+- Figure out how to allow others to contribute!
 - Figure out reliable (but not massive) way to host images
 - Colors and logo?
 - Implement [Algolia Docsearch](https://community.algolia.com/docsearch/)

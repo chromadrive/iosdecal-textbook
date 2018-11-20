@@ -81,6 +81,10 @@
         "title": "ScrollViews",
         "sidebar_label": "ScrollViews"
       },
+      "complex-apps/splitviews": {
+        "title": "SplitViews",
+        "sidebar_label": "SplitViews"
+      },
       "course-site": {
         "title": "Course Website",
         "sidebar_label": "Course Website"
