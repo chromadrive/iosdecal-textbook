@@ -74,6 +74,8 @@ const siteConfig = {
   },
   */
 
+  editUrl: 'https://github.com/chromadrive/iosdecal-textbook/edit/master/docs/',
+
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} iOS Development DeCal (CS198-001)`,
 
